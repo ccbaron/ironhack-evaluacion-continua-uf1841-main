@@ -27,13 +27,12 @@
 
 
         .plan {
-            width: 250px;
+            width: 300px;
             background-color: white;
             text-align: center;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0, 3s;
-            ease;
+            transition: box-shadow 0, 3s ease;
         }
 
         .plan:hover {
@@ -44,6 +43,7 @@
             box-shadow: 0 8px 12px 0 rgba(104, 104, 171, 0.8);
         }
 
+        /* Estilo de titulos*/
 
         .plan__title {
             font-size: 22px;
@@ -52,7 +52,7 @@
             color: white;
         }
 
-        /* Encabezados planes*/
+        /* Encabezados de cada plan*/
 
         .plan__basic .plan__title {
             background-color: black;
@@ -66,7 +66,16 @@
             background-color: black;
         }
 
-        /*Precio de planes*/
+
+        /*Contenedor de precios*/
+
+        .plan__price-container {
+            background-color: #F5F5F5;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
         .plan__price {
             font-size: 18px;
@@ -74,6 +83,7 @@
             margin: 10px 0;
             padding-top: 10px;
         }
+
 
         /* Caracteristicas de planes*/
 
@@ -83,10 +93,14 @@
         }
 
         .plan__features li {
-            padding: 10px 0;
+            padding: 15px 0;
+            border-bottom: 1px solid #DDDDDD;
         }
 
-        
+        .plan__features li:last-child {
+            border-bottom: none;
+        }
+
         /* Botón de registro*/
 
         .plan__button {
@@ -101,11 +115,23 @@
             transition: background-color 0.3s;
         }
 
-        .plan__button:hover {
-            background-color: #5757a3;
+        /* Contenedor del botón*/
+
+        .plan__button-container {
+            background-color: #F5F5F5;
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+
         }
 
 
+        .plan__button:hover {
+            background-color: #5757a3;
+        }
     </style>
 </head>
 
@@ -116,40 +142,52 @@
         <!-- Plan básico-->
         <article class="plan plan__basic">
             <h2 class="plan__title">Básico</h2>
-            <p class="plan__price">$ 9.99 / año</p>
+            <div class="plan__price-container">
+                <p class="plan__price">$ 9.99 / año</p>
+            </div>
             <ul class="plan__features">
                 <li>10GB de Almacenamiento</li>
                 <li>10 Correos Electrónicos</li>
                 <li>10 Dominios</li>
                 <li>1GB de Ancho de Banda</li>
             </ul>
-            <button class="plan__button">Registrarse</button>
+            <div class="plan__button-container">
+                <button class="plan__button">Registrarse</button>
+            </div>
         </article>
 
         <!--Plan Pro-->
         <article class="plan plan__pro">
             <h2 class="plan__title">Pro</h2>
-            <p class="plan__price">$ 24.99 / año</p>
+            <div class="plan__price-container">
+                <p class="plan__price">$ 24.99 / año</p>
+            </div>
             <ul class="plan__features">
                 <li>25GB de Almacenamiento</li>
                 <li>25 Correos Electrónicos</li>
                 <li>25 Dominios</li>
                 <li>2GB de Ancho de Banda</li>
             </ul>
-            <button class="plan__button">Registrarse</button>
+            <div class="plan__button-container">
+                <button class="plan__button">Registrarse</button>
+            </div>
         </article>
 
         <!--Plan Premium-->
         <article class="plan plan__premium">
             <h2 class="plan__title">Premium</h2>
-            <p class="plan__price">$ 49.99 / año</p>
+            <div class="plan__price-container">
+                <p class="plan__price">$ 49.99 / año</p>
+            </div>
             <ul class="plan__features">
                 <li>50GB de Almacenamiento</li>
                 <li>50 Correos Electrónicos</li>
                 <li>50 Dominios</li>
                 <li>5GB de Ancho de Banda</li>
             </ul>
-            <button class="plan__button">Registrarse</button>
+            <div class="plan__button-container">
+                <button class="plan__button">Registrarse</button>
+            </div>
         </article>
     </section>
 </body>
